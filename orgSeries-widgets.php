@@ -117,7 +117,7 @@ class orgSeries_widget_seriestoc extends WP_Widget {
 		else
 			$widget_title = false;
 		$out = '';
-		if ( $showseriestoc ) {
+		/* if ( $showseriestoc ) {
 			if ( $instance['list-type'] == 'list' ) {
 				$out .= '<ul>';
 				$series_args['title_li'] = '';
@@ -127,7 +127,7 @@ class orgSeries_widget_seriestoc extends WP_Widget {
 				$series_args['show_option_all'] = __('Select Series', 'organize-series');
 				$out = wp_dropdown_series( $series_args );
 			}
-		}
+		} */
 		
 		if ( $showpostlist ) {
 			if ( ( $wp_query->is_single ) && $showpostlist && $series = get_the_series() ) {
