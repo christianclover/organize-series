@@ -130,8 +130,8 @@ class orgSeries_widget_seriestoc extends WP_Widget {
 		} */
 		
 		if ( $showpostlist ) {
-			if ( ( $wp_query->is_single ) && $showpostlist && $series = get_the_series() ) {
-				if ( $showseriestoc ) $out .= '<br /><br />';
+			if ( $showpostlist && !is_tax( 'topics' ) && !is_tax( 'apps' ) && !is_tax('series_group') && !is_search() && $series = get_the_series() ) {
+				if ( $showseriestoc ) $out .= '';
 				$out .= get_series_posts('','widget', false, $widget_title);	
 				}
 		}
